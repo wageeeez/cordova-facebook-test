@@ -15,6 +15,9 @@
             <param name="APP_NAME" value="Footpark" />
         </params>
     </plugin>
+     <platform name="android">
+        <preference name="android-minSdkVersion" value="15" />
+    </platform>
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
