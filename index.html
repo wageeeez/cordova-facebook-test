@@ -27,6 +27,7 @@
 	<script type="text/javascript" src="cordova.js"></script>
 	<script type="text/javascript">
 		var login = function () {
+			alert(window.cordova.platformId);
 			if (window.cordova.platformId == "browser") 
 			{
 				facebookConnectPlugin.browserInit("2170647682967582");
@@ -35,13 +36,13 @@
 				function (response) { alert(JSON.stringify(response)) },
 				function (response) { alert(JSON.stringify(response)) });
 		}
-		
+
 		var showDialog = function () { 
 			facebookConnectPlugin.showDialog( { method: "feed" }, 
 				function (response) { alert(JSON.stringify(response)) },
 				function (response) { alert(JSON.stringify(response)) });
 		}
-		
+
 		var apiTest = function () { 
 			facebookConnectPlugin.api( "me/?fields=id,email", ["user_birthday"],
 				function (response) { alert(JSON.stringify(response)) },
@@ -53,7 +54,7 @@
 				function (response) { alert(JSON.stringify(response)) },
 				function (response) { alert(JSON.stringify(response)) });
 		}
-		
+
 		var getStatus = function () { 
 			facebookConnectPlugin.getLoginStatus( 
 				function (response) { alert(JSON.stringify(response)) },
